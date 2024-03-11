@@ -8,9 +8,10 @@ public:
 	OWindow();
 	~OWindow();
 
-	void onDestroy();
-	bool isClosed();
+	void makeCurrentCntext();
+	void present(bool vsync);
 private:
 	void* m_handle = nullptr;
+	void* m_context = nullptr;
 };
 
